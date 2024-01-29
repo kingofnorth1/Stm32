@@ -26,7 +26,7 @@ void Timer_Init(void)
     TIM_TimeBaseInit(TIM2, &TIM_TimeBaseInitStructure);
     
     TIM_ClearFlag(TIM2, TIM_FLAG_Update);
-        (TIM2, TIM_IT_Update, ENABLE);
+    TIM_ITConfig(TIM2, TIM_IT_Update, ENABLE);
     
     NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
     
