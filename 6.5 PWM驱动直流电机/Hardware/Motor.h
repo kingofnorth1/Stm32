@@ -1,3 +1,4 @@
+#include "stdint.h"
 #ifndef __MOTOR__H
 #define __MOTOR__H
 
