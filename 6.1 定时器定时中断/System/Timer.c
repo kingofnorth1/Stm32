@@ -14,8 +14,8 @@ void Timer_Init(void)
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;   
     GPIO_Init(GPIOA, &GPIO_InitStructure);
     
-//    TIM_InternalClockConfig(TIM2);
-    TIM_ETRClockMode2Config(TIM2, TIM_ExtTRGPSC_OFF, TIM_ExtTRGPolarity_Inverted, 0x09);
+    TIM_InternalClockConfig(TIM2);
+//    TIM_ETRClockMode2Config(TIM2, TIM_ExtTRGPSC_OFF, TIM_ExtTRGPolarity_Inverted, 0x09);
     
     TIM_TimeBaseInitTypeDef TIM_TimeBaseInitStructure;
     TIM_TimeBaseInitStructure.TIM_ClockDivision = TIM_CKD_DIV1;
