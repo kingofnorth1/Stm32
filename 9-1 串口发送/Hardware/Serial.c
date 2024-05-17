@@ -1,4 +1,6 @@
 #include "stm32f10x.h"                  // Device header
+#include "stdio.h"
+#include <stdarg.h>
 
 int Serial_Init()
 {
@@ -25,8 +27,60 @@ int Serial_Init()
     return 1;
 }
 
-int Serial_SendByte(int8_t Byte)
+void Serial_SendByte(int8_t Byte)
 {
     USART_SendData(USART1, Byte);
     while (USART_GetFlagStatus(USART1, USART_FLAG_TXE) == RESET);
+}
+
+void Serial_SendArray(uint8_t *Array, int length)
+{
+    for (int i=0;i<length;i++)
+    {
+        Serial_SendByte(Array[i]);
+    }
+}
+
+void Serial_SendString(char *String)
+{
+    uint8_t i;
+    for (i=0;String[i] != '\0';i++)
+    {
+        Serial_SendByte(String[i]);
+    }
+}
+
+uint32_t Serial_SendPow(uint32_t x, uint32_t y)
+{
+    uint32_t Result = 1;
+    while (y--)
+    {
+        Result *= x;
+    }
+    return Result;
+}
+
+void Serial_SendNumber(uint32_t Number, uint8_t Length)
+{
+    uint8_t i;
+    for (i=0;i<Length;i++)
+    {
+        Serial_SendByte(Number / (Serial_SendPow(10, Length - i - 1)) %10 + '0');
+    }
+}
+
+int fputc(int ch, FILE *f)
+{
+    Serial_SendByte(ch);
+    return 1;
+}
+
+void Serial_Printf(char *format, ...)
+{
+    char String[100];
+    va_list arg;
+    va_start(arg, format);
+    vsprintf(String, format, arg);
+    va_end(arg);
+    Serial_SendString(String);
 }
