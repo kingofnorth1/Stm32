@@ -10,8 +10,8 @@
       <TargetName>Target 1</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pArmCC>5060960::V5.06 update 7 (build 960)::.\ARMCC</pArmCC>
-      <pCCUsed>5060960::V5.06 update 7 (build 960)::.\ARMCC</pCCUsed>
+      <pArmCC>5060960::V5.06 update 7 (build 960)::.\ARM_Compiler_5.06u7</pArmCC>
+      <pCCUsed>5060960::V5.06 update 7 (build 960)::.\ARM_Compiler_5.06u7</pCCUsed>
       <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
@@ -726,29 +726,29 @@
               <FilePath>.\Hardware\OLED_Font.h</FilePath>
             </File>
             <File>
-              <FileName>MyI2C.c</FileName>
+              <FileName>MySPI.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Hardware\MyI2C.c</FilePath>
+              <FilePath>.\Hardware\MySPI.c</FilePath>
             </File>
             <File>
-              <FileName>MyI2C.h</FileName>
+              <FileName>MySPI.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\Hardware\MyI2C.h</FilePath>
+              <FilePath>.\Hardware\MySPI.h</FilePath>
             </File>
             <File>
-              <FileName>MPU6050.c</FileName>
+              <FileName>W25Q64.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Hardware\MPU6050.c</FilePath>
+              <FilePath>.\Hardware\W25Q64.c</FilePath>
             </File>
             <File>
-              <FileName>MPU6050.h</FileName>
+              <FileName>W25Q64.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\Hardware\MPU6050.h</FilePath>
+              <FilePath>.\Hardware\W25Q64.h</FilePath>
             </File>
             <File>
-              <FileName>MPU6050_Reg.h</FileName>
+              <FileName>W25Q64_Ins.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\Hardware\MPU6050_Reg.h</FilePath>
+              <FilePath>.\Hardware\W25Q64_Ins.h</FilePath>
             </File>
           </Files>
         </Group>
