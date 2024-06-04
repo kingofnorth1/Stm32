@@ -293,7 +293,7 @@ void OLED_Init(void)
 	}
 	
 	OLED_I2C_Init();			//端口初始化
-	OLED_6_7_Init();
+//	OLED_6_7_Init();
 	
 	OLED_WriteCommand(0xAE);	//关闭显示
 	
