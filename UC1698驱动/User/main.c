@@ -8,11 +8,10 @@ int main(void)
     GPIO_PinRemapConfig(GPIO_Remap_SWJ_JTAGDisable, ENABLE);
  
     GPIO_Init_Periph();
-    Delay_ms(100);
 	UC1698_Init();
     Delay_ms(100);                                                                                                                                                                          
-	lcdscan(0xFF,0x40);
-//    character();
+//	lcdscan(0xFF,0x40);
+    character();
 	while (1)
 	{
 		
